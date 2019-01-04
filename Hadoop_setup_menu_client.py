@@ -19,8 +19,7 @@ def speak(x):
 
 def recog():
     import speech_recognition as sr
-    import pyttsx3
-    import pyaudio
+    import pyttsx3    import pyaudio
     mic=sr.Microphone()
     rec=sr.Recognizer()
     with mic as source:
@@ -57,7 +56,7 @@ def send(cmd):
 # In[ ]:
 
 
-# capturing image for face learning(can be romoved if already done)
+# capturing image for face learning(can be removed if already done)
 import cv2
 import numpy as np
 
