@@ -1,0 +1,6 @@
+- hosts: tt
+  tasks:
+    - copy:
+        src: "/root/Desktop/project/mapred-site.xml"
+        dest: "/etc/hadoop/mapred-site.xml"
+       

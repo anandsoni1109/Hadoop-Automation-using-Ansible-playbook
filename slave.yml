@@ -1,0 +1,24 @@
+- hosts: slave
+  tasks:
+
+    - name: Create directory
+      file:
+        path: /data
+        state: directory
+
+    - copy:
+        src: "/root/Desktop/project/core-site.xml"
+        dest: "/etc/hadoop/core-site.xml"
+
+
+    - copy:
+        src: "/root/Desktop/project/hdfs-site.xml"
+        dest: "/etc/hadoop/hdfs-site.xml"
+
+- hosts: all
+  tasks:
+
+    - copy:    
+        src: "/etc/hosts"
+        dest: "/etc/hosts"
+ 

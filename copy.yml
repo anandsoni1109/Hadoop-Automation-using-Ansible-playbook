@@ -1,0 +1,11 @@
+- hosts: all
+  tasks: 
+    - copy:
+        src: "/root/Desktop/project/hadoop-1.2.1-1.x86_64.rpm"
+        dest: "/root"
+
+    - copy:
+        src: "/root/Desktop/project/jdk-8u171-linux-x64.rpm"
+        dest: "/root"
+
+

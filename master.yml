@@ -1,0 +1,28 @@
+- hosts: master
+  tasks:
+
+    - name: Create directory
+      file:
+        path: /name
+        state: directory
+
+    - copy:
+        src: "/root/Desktop/project/core-site.xml"
+        dest: "/etc/hadoop/core-site.xml"
+
+
+    - copy:
+        src: "/root/Desktop/project/masterhdfs/hdfs-site.xml"
+        dest: "/etc/hadoop/hdfs-site.xml"
+    
+    - service:
+        name: firewalld
+        state: stopped
+
+- hosts: all
+  tasks:
+
+    - copy:
+        src: "/etc/hosts"
+        dest: "/etc/hosts"
+ 
